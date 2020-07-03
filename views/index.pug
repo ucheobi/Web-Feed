@@ -1,0 +1,41 @@
+extends layout 
+
+block content 
+  div(class="row")
+    each nytfeed in nyt_feed.items
+      div(class="col-sm-12")
+        div(class="well")
+          p= nytfeed.title
+          p= nytfeed.content
+          p= nytfeed.pubDate
+          p= nytfeed.link
+         
+
+  div(class="col-sm-3 well")
+    div(class="row")       
+      div(class="text-center")   
+        div(class="well")
+          p
+            a(href="#")  My Profile
+            img(src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar")
+    
+     
+    
+        div(class="alert alert-success fade in")
+          a(href="#" class="close" data-dismiss="alert" aria-label="close") ×
+            p
+              strong Ey! People are looking at your profile. Find out who.
+            p
+              a(href="#") Link
+            p
+              a(href="#") Link
+            p
+              a(href="#") Link
+       
+        
+//-    div(class="row")
+//-      div(class="col-sm-12")
+//-        div(class="footer")
+//-          footer(class="container-fluid text-center")
+//-            p Footer Text
+  
